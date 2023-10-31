@@ -1,0 +1,11 @@
+#!/usr/bin/python3
+for f in range(1, 101):
+    if (f % 5 == 0) and (f % 3 == 0):
+        print("FizzBuzz", end=" ")
+    elif f % 3 == 0:
+        print("Fizz", end=" ")
+    elif f % 5 == 0:
+        print("Buzz", end=" ")
+    else:
+        print(f, end=" ")
+print()
