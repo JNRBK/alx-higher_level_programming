@@ -1,6 +1,6 @@
 # Sprint <sub>TWO</sub>
 
-## Alx Higher Lever Programming
+## Alx Higher <sub>Level programming</sub>
 
 | Language   |          ICON        |
 | ---------- | -----------------    |
