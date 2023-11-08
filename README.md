@@ -2,7 +2,7 @@
 
 ## Alx Higher <sub>Level programming</sub>
 
-| Language   |          ICON        |
-| ---------- | -----------------    |
-| `Python`     |         :snake:      |
-  
+
+
+| `Python`     |         :snake:      |  
+| ------------- | -------------- |
