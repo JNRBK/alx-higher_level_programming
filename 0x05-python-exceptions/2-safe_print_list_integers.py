@@ -5,8 +5,9 @@ def safe_print_list_integers(my_list=[], x=0):
         for i in range(x):
             if isinstance(my_list[i], int):
                 print("{:d}".format(my_list[i]), end="")
-    except (IndexError, TypeError, ValueError):
+                itr += 1
+    except (ValueError, TypeError):
         pass
     finally:
         print()
-    return itr
+        return itr
