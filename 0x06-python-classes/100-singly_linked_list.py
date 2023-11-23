@@ -60,7 +60,11 @@ class SinglyLinkedList:
     def __str__(self):
         result = ""
         current = self.head
+        first_node = True
         while current:
-            result += str(current.data)+'\n'
+            if not first_node:
+                result += '\n'
+            result += str(current.data)
             current = current.next_node
+            first_node = False
         return result
