@@ -46,4 +46,4 @@ class Rectangle:
         """calculating rectangle's parameter"""
         if self.__width == 0 or self.__height == 0:
             self.__perimeter = 0
-        return 2 * (self.width + self.__height)
+        return (2 * (self.width + self.__height))
