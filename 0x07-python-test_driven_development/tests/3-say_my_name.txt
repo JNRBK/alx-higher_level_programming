@@ -1,0 +1,21 @@
+===================================
+testing function say_my_name -> str
+===================================
+
+>>> say_my_name = __import__('3-say_my_name').say_my_name
+>>> say_my_name("Alx", "Student")
+My name is Alx Student
+
+>>> say_my_name("random", "name")
+My name is random name
+
+>>> say_my_name("Alexander")
+My name is Alexander
+
+>>> say_my_name("nonstr", 123)
+Traceback (most recent call last):
+TypeError: last_name must be a string
+
+>>> say_my_name(123, "lastly")
+Traceback (most recent call last):
+TypeError: first_name must be a string

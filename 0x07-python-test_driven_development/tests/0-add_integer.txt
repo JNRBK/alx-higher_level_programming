@@ -1,0 +1,31 @@
+=============================
+Test of function add_integer
+=============================
+
+>>> add_integer = __import__('0-add_integer').add_integer
+>>> add_integer(10, 4)
+14
+
+>>> add_integer(10, 'a')
+Traceback (most recent call last):
+TypeError: b must be an integer
+
+>>> add_integer(10, -10)
+0
+
+>>> add_integer('a', -10)
+Traceback (most recent call last):
+TypeError: a must be an integer
+
+>>> add_integer(2.8, 3.1)
+5
+
+Second argument is 98 by defualt
+>>> add_integer(2)
+100
+
+>>> add_integer(100)
+198
+
+>>> add_integer(-2, 3.9)
+1
