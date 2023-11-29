@@ -1,3 +1,3 @@
 #!/usr/bin/python3
 def copy_list(l):
-    return l[:] if isinstance(l, list) else None
+    return cpl[:] if isinstance(cpl, list) else None
