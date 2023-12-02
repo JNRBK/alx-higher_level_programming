@@ -37,3 +37,19 @@ TypeError: matrix must be a matrix (list of lists)of integers/floats
 >>> print(matrix_divided(matrix, "strin"))
 Traceback (most recent call last):
 TypeError: div must be a number
+
+>>> matrix = [
+...     [3, "8"],
+...     [12, 3]
+... ]
+>>> print(matrix_divided(matrix, 2))
+Traceback (most recent call last):
+TypeError: matrix must be a matrix (list of lists)of integers/floats
+
+>>> matrix = [
+...     [3, 8],
+...     [12, 6]
+... ]
+>>> print(matrix_divided(matrix, "2"))
+Traceback (most recent call last):
+TypeError: div must be a number
