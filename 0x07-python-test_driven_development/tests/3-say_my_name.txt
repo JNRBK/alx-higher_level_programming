@@ -6,16 +6,22 @@ testing function say_my_name -> str
 >>> say_my_name("Alx", "Student")
 My name is Alx Student
 
->>> say_my_name("random", "name")
-My name is random name
+>>> say_my_name("Alx", Student)
+Traceback (most recent call last):
+NameError: name 'Student' is not defined
 
->>> say_my_name("Alexander")
-My name is Alexander
-
->>> say_my_name("nonstr", 123)
+>>> say_my_name("Alx", 3)
 Traceback (most recent call last):
 TypeError: last_name must be a string
 
->>> say_my_name(123, "lastly")
+>>> say_my_name(3, "smith")
 Traceback (most recent call last):
 TypeError: first_name must be a string
+
+>>> say_my_name({"LeBron": 6, "James": 12})
+Traceback (most recent call last):
+TypeError: first_name must be a string
+
+>>> say_my_name()
+Traceback (most recent call last):
+TypeError: say_my_name() missing 1 required positional argument: 'first_name'
