@@ -22,12 +22,12 @@ TypeError: Each row of the matrix must have the same size
 >>> matrix = None
 >>> print(matrix_divided(matrix, 5))
 Traceback (most recent call last):
-TypeError: matrix must be a matrix (list of lists)of integers/floats
+TypeError: matrix must be a matrix (list of lists) of integers/floats
 
 >>> matrix = [1, 2, 3]
 >>> print(matrix_divided(matrix, 3))
 Traceback (most recent call last):
-TypeError: matrix must be a matrix (list of lists)of integers/floats
+TypeError: matrix must be a matrix (list of lists) of integers/floats
 
 >>> matrix = [
 ...     [123, 43, 23],
@@ -44,7 +44,7 @@ TypeError: div must be a number
 ... ]
 >>> print(matrix_divided(matrix, 2))
 Traceback (most recent call last):
-TypeError: matrix must be a matrix (list of lists)of integers/floats
+TypeError: matrix must be a matrix (list of lists) of integers/floats
 
 >>> matrix = [
 ...     [3, 8],
