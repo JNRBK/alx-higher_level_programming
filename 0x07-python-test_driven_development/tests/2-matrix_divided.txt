@@ -28,3 +28,12 @@ TypeError: matrix must be a matrix (list of lists)of integers/floats
 >>> print(matrix_divided(matrix, 3))
 Traceback (most recent call last):
 TypeError: matrix must be a matrix (list of lists)of integers/floats
+
+>>> matrix = [
+...     [123, 43, 23],
+...     [12, 42, 12]
+... ]
+
+>>> print(matrix_divided(matrix, "strin"))
+Traceback (most recent call last):
+TypeError: div must be a number
