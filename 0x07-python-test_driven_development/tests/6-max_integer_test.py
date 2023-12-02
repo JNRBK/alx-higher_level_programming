@@ -30,8 +30,8 @@ class TestMaxInteger(unittest.TestCase):
 
     def test_one_element_list(self):
         """a list with a single element."""
-        one_element = [10]
-        self.assertEqual(max_integer(one_element), 10)
+        one_element = [7]
+        self.assertEqual(max_integer(one_element), 7)
 
     def test_floats(self):
         """a list of floats."""
@@ -46,7 +46,7 @@ class TestMaxInteger(unittest.TestCase):
     def test_string(self):
         """a string."""
         string = "Brennan"
-        self.assertEqual(max_integer(string), 'c')
+        self.assertEqual(max_integer(string), 'r')
 
     def test_list_of_strings(self):
         """ a list of strings."""
