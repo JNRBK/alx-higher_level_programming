@@ -1,0 +1,36 @@
+#!/usr/bin/python3
+"""
+BaseGeometry module
+"""
+
+
+class BaseGeometry:
+    """class BaseGeometry"""
+    def area(self):
+        """ public instance """
+        raise Exception("area() is not implemented")
+
+    def integer_validator(self, name, value):
+        """
+        public method that validates value
+        Args:
+        @name: string representing name
+        @value: value of name
+        """
+        if type(value) is not int:
+            raise TypeError(f"{name} must be an integer")
+        if value <= 0:
+            raise ValueError(f"{name} must be greater than 0")
+
+
+class Rectangle(BaseGeometry):
+    """ Instantiation with width and height
+    Args:
+    @width: rectangle's
+    @height: rectangle's
+    """
+    def __init__(self, width, height):
+        self.integer_validator("width", width)
+        self.integer_validator("height", height)
+        self.__width = width
+        self.__height = height
