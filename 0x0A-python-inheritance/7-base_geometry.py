@@ -1,18 +1,18 @@
 #!/usr/bin/python3
 """
-class base geometry
+BaseGeometry module
 """
 
 
 class BaseGeometry:
-    """structure of class"""
+    """class BaseGeometry"""
     def area(self):
-        """ area function that raises and exception """
+        """ public instance """
         raise Exception("area() is not implemented")
 
     def integer_validator(self, name, value):
         """
-        integer_validator that validates value
+        public method that validates value
         Args:
         @name: string representing name
         @value: value of name
