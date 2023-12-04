@@ -1,0 +1,1 @@
+# :snake: <sup>Inheritence</sup>
