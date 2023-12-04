@@ -46,3 +46,7 @@ TypeError: integer_validator() missing 1 required positional argument: 'value'
 >>> bg.integer_validator("Ryt", (1, 0))
 Traceback (most recent call last):
 TypeError: Ryt must be an integer
+
+>>> bg.integer_validator("add", [1])
+Traceback (most recent call last):
+TypeError: add must be an integer
