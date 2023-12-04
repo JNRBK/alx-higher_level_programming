@@ -5,4 +5,9 @@
 
 
 def lookup(obj):
+    """
+    Args:
+    @obj: object for attribute
+    Return: List of all available attributes
+    """
     return dir(obj)
