@@ -17,6 +17,6 @@ except FileNotFoundError:
     load = []
 
 for arguments in sys.argv[1:]:
-    load.append(arguments + '\n')
+    load.append(arguments)
 
 save_to(load, "add_item.json")
