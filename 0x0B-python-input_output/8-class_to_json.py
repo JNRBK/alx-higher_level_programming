@@ -10,4 +10,4 @@ def class_to_json(obj):
     Args:
     @obj: instance of a class
     """
-    return vars(obj)
+    return obj.__dict__
