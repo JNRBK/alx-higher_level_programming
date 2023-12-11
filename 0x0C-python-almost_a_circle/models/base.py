@@ -51,7 +51,7 @@ class Base:
         static method that returns the list of json
         string representation
         """
-        if json_string is None or json_string == []:
+        if json_string is None or json_string == '':
             return "[]"
         else:
             return json.loads(json_string)
