@@ -1,1 +1,1 @@
-# Almost a :circle:
+# Almost a ⚫
