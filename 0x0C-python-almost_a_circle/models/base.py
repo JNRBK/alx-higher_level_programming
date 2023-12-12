@@ -68,3 +68,10 @@ class Base:
             dum = cls(1)
         dum.update(**dictionary)
         return dum
+
+    @classmethod
+    def load_from_file(cls):
+        if not cls.__name__:
+            return []
+        else:
+            return ("{}.json".format(cls.__name__))
