@@ -1,6 +1,7 @@
 import unittest
 from models.base import Base
 from models.square import Square
+from models.rectangle import Rectangle
 import json
 
 
@@ -35,3 +36,10 @@ class TestBase(unittest.TestCase):
         fjson2 = Base.from_json_string(data)
         ex = json.loads(data)
         self.assertEqual(fjson2, ex)
+
+    def test_rectangle(self):
+        rec = Rectangle(10, 5)
+        self.assertEqual(rec.area(), 50)
+        r1 = Rectangle(1, 2)
+        self.assertEqual(r1.width, 1)
+        self.assertEqual(r1.height, 2)
