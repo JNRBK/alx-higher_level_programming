@@ -23,3 +23,15 @@ class TestBase(unittest.TestCase):
         tjson = Base.to_json_string(data)
         ex = json.dumps(data)
         self.assertEqual(tjson, ex)
+
+    def test_from_json_string(self):
+        fjson = Base.from_json_string('')
+        self.assertEqual(fjson, [])
+        fjson1 = Base.from_json_string(None)
+        self.assertEqual(fjson1, [])
+        fj = Base.from_json_string("[]")
+        self.assertEqual(fj, [])
+        data = ('[{"id": 89}]')
+        fjson2 = Base.from_json_string(data)
+        ex = json.loads(data)
+        self.assertEqual(fjson2, ex)
