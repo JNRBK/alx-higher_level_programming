@@ -34,3 +34,14 @@ class Test_Rectangle(unittest.TestCase):
 
         self.assertRaises(ValueError, Rectangle, 0, 2)
         self.assertRaises(ValueError, Rectangle, 1, 0)
+
+    def test_x_and_y(self):
+        x_y = Rectangle(1, 2, 3, 4)
+        self.assertRaises(TypeError, Rectangle, 1, 2, "3", 4)
+        self.assertRaises(TypeError, Rectangle, 1, 2, 3, "4")
+
+        self.assertRaises(TypeError, Rectangle, 1, 2, None, 4)
+        self.assertRaises(TypeError, Rectangle, 1, 2, 3, None)
+
+        self.assertRaises(ValueError, Rectangle, 1, 2, -3, 4)
+        self.assertRaises(ValueError, Rectangle, 1, 2, 3, -4)
