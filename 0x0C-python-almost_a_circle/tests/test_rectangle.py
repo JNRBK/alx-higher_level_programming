@@ -20,3 +20,7 @@ class Test_Rectangle(unittest.TestCase):
         self.assertEqual(a2.width, 1)
         self.assertEqual(a2.height, 2)
         self.assertEqual(a2.x, 3)
+
+    def test_width(self):
+        with self.assertRaises(ValueError):
+            d = Rectangle(0, 0)
