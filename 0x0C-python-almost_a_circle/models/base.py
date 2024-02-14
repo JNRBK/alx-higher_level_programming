@@ -71,7 +71,7 @@ class Base:
 
     @classmethod
     def load_from_file(cls):
-        if not cls.__name__:
-            return []
-        else:
+        if cls.__name__:
             return ("{}.json".format(cls.__name__))
+        else:
+            return []
