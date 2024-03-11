@@ -1,1 +1,0 @@
-# JavaScript<sup>WarmUp</sup>
