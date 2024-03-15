@@ -26,7 +26,7 @@ db = MySQLdb.connect(
 cur = db.cursor()
 do = argv[4]
 
-cur.execute('SELECT * FROM states WHERE name = %s', (do,))
+cur.execute('SELECT * FROM states WHERE name = %s ORDER BY id ASC;', (do,))
 
 rows = cur.fetchall()
 
