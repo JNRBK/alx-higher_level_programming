@@ -12,26 +12,28 @@ Args:
 Returns:
     None
 """
-import MySQLdb
-from sys import argv
 
-db = MySQLdb.connect(
-    host="localhost",
-    port=3306,
-    user=argv[1],
-    passwd=argv[2],
-    db=argv[3],
-)
+if __name__ == "__main__":
+    import MySQLdb
+    from sys import argv
 
-cur = db.cursor()
-do = argv[4]
+    db = MySQLdb.connect(
+        host="localhost",
+        port=3306,
+        user=argv[1],
+        passwd=argv[2],
+        db=argv[3],
+    )
 
-cur.execute('SELECT * FROM states WHERE name = %s ORDER BY id ASC;', (do,))
+    cur = db.cursor()
+    do = argv[4]
 
-rows = cur.fetchall()
+    cur.execute('SELECT * FROM states WHERE name = %s ORDER BY id ASC;', (do,))
 
-for row in rows:
-    print(row)
+    rows = cur.fetchall()
 
-cur.close()
-db.close()
+    for row in rows:
+        print(row)
+
+    cur.close()
+    db.close()
