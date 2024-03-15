@@ -23,7 +23,7 @@ if __name__ == "__main__":
 
     cur = db.cursor()
 
-    cur.execute("SELECT GROUP_CONCAT(cities.name) FROM states \
+    cur.execute("SELECT GROUP_CONCAT(cities.name SEPARATOR', ') FROM states \
                 JOIN cities ON states.id = cities.state_id \
                 WHERE states.name = %s", (argv[4],))
 
