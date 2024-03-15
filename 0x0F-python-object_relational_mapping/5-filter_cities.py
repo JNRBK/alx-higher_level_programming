@@ -25,7 +25,7 @@ if __name__ == "__main__":
 
     cur.execute("SELECT GROUP_CONCAT(cities.name SEPARATOR', ') FROM states \
                 JOIN cities ON states.id = cities.state_id \
-                WHERE states.name = %s", (argv[4],))
+                WHERE states.name = %s ORDER BY cities.id", (argv[4],))
 
     rows = cur.fetchone()
 
