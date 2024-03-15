@@ -15,9 +15,9 @@ Base = declarative_base()
 
 class State(Base):
     __tablename__ = 'states'
-    id = Column(Integer, primary_key=True, autoincrement=True,
+    id = Column("id", Integer, primary_key=True, autoincrement=True,
                 unique=True, nullable=False)
-    name = Column(String(128), nullable=False)
+    name = Column("name", String(128), nullable=False)
 
 
 conect = 'mysql://root:root@localhost:3306/hbtn_0e_6_usa'
