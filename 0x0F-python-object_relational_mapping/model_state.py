@@ -10,7 +10,7 @@ from sqlalchemy import Column, Integer, String, create_engine
 from sqlalchemy.ext.declarative import declarative_base
 
 
-engine = create_engine('mysql://root:root@localhost:3306/hbtn_0e_6_usa')
+# engine = create_engine('mysql://root:root@localhost:3306/hbtn_0e_6_usa')
 Base = declarative_base()
 
 
@@ -22,8 +22,8 @@ class State(Base):
                 unique=True, nullable=False)
     name = Column("name", String(128), nullable=False)
 
-    def __init__(self, id, name):
-        self.id = id
-        self.name = name
+    # def __init__(self, id, name):
+    #     self.id = id
+    #     self.name = name
 
-Base.metadata.create_all(engine)
+# Base.metadata.create_all(engine)
