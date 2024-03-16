@@ -22,5 +22,8 @@ class State(Base):
                 unique=True, nullable=False)
     name = Column("name", String(128), nullable=False)
 
+    def __init__(self, id, name):
+        self.id = id
+        self.name = name
 
 Base.metadata.create_all(engine)
