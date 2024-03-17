@@ -23,9 +23,10 @@ if __name__ == "__main__":
 
     cur = db.cursor()
 
-    cur.execute("SELECT GROUP_CONCAT(cities.name SEPARATOR', ') FROM states \
+    cur.execute(
+        "SELECT GROUP_CONCAT(cities.name SEPARATOR', ') FROM states \
                 JOIN cities ON states.id = cities.state_id \
-                WHERE states.name = %s ORDER BY cities.id ASC", (argv[4],))
+                WHERE states.name='{}' ORDER BY cities.id ASC".format(argv[4]))
 
     rows = cur.fetchone()
 
