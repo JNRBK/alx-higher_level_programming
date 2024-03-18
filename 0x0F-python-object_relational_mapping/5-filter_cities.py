@@ -24,14 +24,14 @@ if __name__ == "__main__":
     cur = db.cursor()
 
     cur.execute(
-        "SELECT GROUP_CONCAT(cities.name SEPARATOR', ') FROM states \
-                JOIN cities ON states.id = cities.state_id \
-                WHERE states.name='{}' ORDER BY cities.id ASC".format(argv[4]))
+        "SELECT cities.name FROM cities \
+                JOIN states ON cities.state_id = states.id \
+                WHERE states.name=%s ORDER BY cities.id ASC", (argv[4],))
 
-    rows = cur.fetchone()
+    rows = cur.fetchall()
 
-    if rows[0]:
-        print(rows[0])
+    city_name = [row[0] for row in rows]
 
+    print(", ".join(city_name))
     cur.close()
     db.close()
