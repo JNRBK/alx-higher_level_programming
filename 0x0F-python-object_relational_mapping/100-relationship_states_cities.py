@@ -8,11 +8,10 @@ ARGS:
     ARGV2 - password
     ARGV3 - database name
 """
-from venv import create
 from sqlalchemy import create_engine
-from relationship_state import Base, State
-from relationship_city import City
 from sqlalchemy.orm import sessionmaker
+from relationship_city import City
+from relationship_state import Base, State
 from sys import argv
 
 if __name__ == "__main__":
@@ -25,10 +24,10 @@ if __name__ == "__main__":
 
     Base.metadata.create_all(engine)
 
-    addS = State('California')
-    addC = City('San Francisco')
+    california = State(name='California', cities=[City(name='San Francisco')])
 
-    addS.cities.append(addC)
-    session.add(addS)
+    session.add(california)
 
     session.commit()
+
+    session.close()

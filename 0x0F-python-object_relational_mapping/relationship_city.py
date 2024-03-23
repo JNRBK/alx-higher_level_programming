@@ -4,9 +4,11 @@
 """
 Python file model_city.py that contains the class definition of a City
 """
-from sqlalchemy import Column, ForeignKey, Integer, String, create_engine
-from model_state import Base
+from sqlalchemy import Column, String, Integer, ForeignKey
+from sqlalchemy.orm import relationship
+from sqlalchemy.ext.declarative import declarative_base
 
+Base = declarative_base()
 
 class City(Base):
     """Class City Inherits from Base
