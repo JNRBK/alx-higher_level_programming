@@ -1,11 +1,10 @@
 #!/usr/bin/python3
-
-#!/usr/bin/python3
 """
 Python file model_city.py that contains the class definition of a City
 """
 from sqlalchemy import Column, String, Integer, ForeignKey
 from relationship_state import Base
+
 
 class City(Base):
     """Class City Inherits from Base
