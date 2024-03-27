@@ -1,5 +1,4 @@
 #!/bin/bash
 
-url="$1"
 
-curl -s "$url" | grep -i 'Content-Length:' | awk '{print $2}'
+curl -s "$1" | grep -i 'Content-Length:' | awk '{print $2}'
