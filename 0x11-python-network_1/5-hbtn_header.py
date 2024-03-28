@@ -9,5 +9,7 @@ import requests
 from sys import argv
 
 if __name__ == "__main__":
-    r = requests.get(argv[1], timeout=5)
-    print(r.headers.get('X-Request-Id'))
+    req = requests.get(argv[1])
+    if 'X-Request-Id' in req.headers:
+        fetch = req.headers['X-Request-Id']
+        print(fetch)
