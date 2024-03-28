@@ -9,4 +9,4 @@ if __name__ == "__main__":
     ftch = requests.get('https://alx-intranet.hbtn.io/status')
     print("Body response:")
     print("\t- type: {}".format(type(ftch.text)))
-    print("\t- content: {}".format(ftch.content.decode('utf-8')))
+    print("\t- content: {}".format(ftch.text))
